@@ -63,6 +63,8 @@ fi
 # Generate the Markdown report
 echo -e "$report_content" > "$report_dir/baseline_model_report.md"
 
+report_content="$report_content## Confusion Matrix\n\n"
+report_content="$report_content![Confusion Matrix](report_folder/LogisticRegression_confusion_matrix.png)"
 # Add, commit, and push changes
 git add "$report_dir/baseline_model_report.md"
 git commit -m "Added baseline model report"
